@@ -129,6 +129,52 @@
 				</li>
 			</ul>
 		</li>
+
+		<li class="header">New Feature</li>
+
+		<li class="treeview">
+			<a href="#">
+				<i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+				<span>Multimedia</span>
+				<i class="fa fa-angle-left pull-right"></i>
+			</a>
+			<ul class="treeview-menu">
+				<li>
+					<p:link outcome="/multimedia/charts/animate.xhtml">
+						<span>Charts</span>
+						<i class="fa fa-bitcoin pull-right"></i>
+					</p:link>
+				</li>
+				<li>
+					<p:link outcome="/multimedia/maps/street.xhtml">
+						<span>Maps</span>
+						<i class="fa fa-bitcoin pull-right"></i>
+					</p:link>
+				</li>
+				<li>
+					<p:link outcome="/multimedia/media/media.xhtml">
+						<span>PDF</span>
+						<i class="fa fa-file-pdf-o pull-right"></i>
+					</p:link>
+				</li>
+			</ul>
+		</li>
+
+		<sec:authorize access="hasAnyRole('ADMIN', 'USER')">
+			<li class="treeview"><a href="#"><i
+					class="fa fa-car"></i> <span>Products</span> <i
+					class="fa fa-angle-left pull-right"></i> </a>
+				<ul class="treeview-menu">
+					<li><p:link outcome="/public/product-list">
+						<span>List</span>
+						<i class="fa fa-th-list pull-right"></i>
+					</p:link></li>
+					<li><p:link outcome="/public/product-form">
+						<span>New</span>
+						<i class="fa fa-plus-circle pull-right"></i>
+					</p:link></li>
+				</ul></li>
+		</sec:authorize>
 		
 	</ul>
 
